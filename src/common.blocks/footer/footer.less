@@ -1,0 +1,139 @@
+.footer {
+  background-image: url(../footer/footer-bg.jpg);
+  color: #fff;
+  
+  &__wrapper {    
+    padding-top: 32px;
+    padding-bottom: 122px;
+    background-color: rgba(43, 40, 49, 0.7);
+
+    @media (max-width: (992px)) {
+      padding-bottom: 57px;
+    }
+  }
+
+  &__inner {
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    gap: 24px;
+
+    @media (max-width: (576px)) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  &__list {
+    grid-column: 3 span;
+
+    @media (max-width: (1200px)) {
+      grid-column: 4 span;
+    }
+
+    @media (max-width: (768px)) {
+      grid-column: 6 span;
+    }
+
+    @media (max-width: (576px)) {
+      grid-column: 2 span;
+    }
+  }
+
+  &__item {
+    margin-bottom: 10px;
+    font-size: 14px;
+    line-height: 20px;
+    font-style: normal;
+
+    span {
+      display: block;
+    }
+  }
+
+  &__link {
+    text-decoration-line: underline;
+
+    &:hover {
+      text-decoration-line: none;
+    }
+  }
+
+  &__address {
+    grid-column: 3 span;   
+    
+    @media (max-width: (1200px)) {
+      grid-column: 4 span;
+    }
+
+    @media (max-width: (768px)) {
+      grid-column: 6 span;
+    }
+
+    @media (max-width: (576px)) {
+      grid-column: 2 span;
+    }
+  }
+
+  &__info {
+    grid-column: 3 span;
+    margin-left: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+
+    @media (max-width: (1200px)) {
+      grid-column: 12 span;
+      margin-left: none;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+    }
+
+    @media (max-width: (768px)) {
+      grid-column: 6 span;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+    }
+
+    @media (max-width: (576px)) {
+      grid-column: 2 span;
+      align-items: flex-start;
+    }
+  }
+
+  &__logo {
+    margin-bottom: 15px;
+
+    @media (max-width: (1200px)) {
+      margin-bottom: 0;
+    }
+
+    @media (max-width: (576px)) {
+      margin-bottom: 8px;
+
+      img {
+        width: 70%;
+      }
+    }
+  }
+
+  &__copy {
+    margin-bottom: 82px;
+    font-size: 12px;
+    line-height: 18px;
+
+    @media (max-width: (1200px)) {
+      margin-bottom: 0;
+    }
+
+    @media (max-width: (576px)) {
+      margin-bottom: 5px;
+    }
+  }
+
+  &__text {
+    font-size: 12px;
+    line-height: 18px;
+  }
+}

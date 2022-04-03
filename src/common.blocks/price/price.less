@@ -1,0 +1,50 @@
+.price {
+  padding-top: 88px;
+  padding-bottom: 143px;
+
+  &__title {
+    margin-bottom: 32px;
+  }
+
+  &__descr {
+    max-width: 936px;
+    margin-bottom: 30px;
+
+    @media (max-width: (576px)) {
+      font-size: 14px;
+      line-height: 20px;
+    }
+  }
+
+  &__inner {
+    @media (max-width: (992px)) {
+      overflow-x: auto;
+    }
+  }
+
+  &__table {
+    margin-bottom: 32px;
+  }
+
+  &__btn {
+    display: block;
+    margin: 0 auto 32px;
+  }
+
+  &__link {
+    text-align: center;
+  }
+
+  &__load {
+    text-decoration-line: underline;
+
+    &:hover {
+      text-decoration-line: none;
+    }
+  }
+
+  @media (max-width: (992px)) {
+    padding: 57px 0;
+  }
+}
+

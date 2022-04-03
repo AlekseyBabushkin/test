@@ -1,0 +1,125 @@
+.nav {
+
+  &__list {
+    display: flex;
+    align-items: center;
+    padding: 0;  
+    
+    @media (max-width: (992px)) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+
+  &__item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    color: #fff;
+
+    &:not(:last-child) {
+      margin-right: 40px;
+    }
+
+    &:hover {
+      .nav__sub-list {
+        opacity: 1;
+        visibility: visible;
+        transform: translate(0px, 0px);
+        pointer-events: auto;        
+      }   
+
+      .nav__arrow{
+        transform: rotate(-180deg);
+      }  
+    }
+
+    @media (max-width: (1300px)) {
+      &:not(:last-child) {
+        margin-right: 25px;
+      }
+    }
+
+    @media (max-width: (992px)) {
+      margin-bottom: 16px;
+
+      &:not(:last-child) {
+        margin-right: 0;
+      }
+    }
+  }
+
+  &__link {
+    position: relative; 
+
+    &:after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 0;
+      height: 3px;
+      width: 100%;
+      background-color: #ffb71b;
+      transform: scaleX(0);
+      transition: transform 0.3s ease-in-out;
+    }
+
+    &:hover::after {
+      transform: scaleX(1);
+    }
+  }
+
+  &__arrow {
+    margin-left: 5px;
+    object-fit: cover;
+    transition: all 0.4s ease-in-out;
+  }
+
+  &__sub-list {
+    position: absolute;
+    background-color: #2b2831;
+    width: 392px;
+    padding: 0;
+    opacity: 0;
+    visibility: hidden;
+    min-width: 200px;
+    left: 0;
+    top: 100%;
+    transition: all 0.3s ease;
+    transform: translate(0px, 10px);
+    pointer-events: none;
+  }
+
+  &__sub-link {
+    display: block;
+    width: 100%;
+    padding: 8px 16px;
+    transition: all 0.3s ease;
+    
+    &:hover {
+      color: #ffb71b;
+      background-color: #3a3a47;
+    }      
+  }
+
+  @media (max-width: (992px)) {
+    position: fixed;
+    padding: 65px 30px 30px 20px;
+    width: 100%;
+    max-width: 400px;
+    height: 100vh;
+    right: 0;
+    top: 0;
+    overflow-y: auto;
+    z-index: 500;
+    background-color: #2b2831;
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in-out;
+  }
+
+  &--visible {
+    transform: translateX(0);
+  } 
+}

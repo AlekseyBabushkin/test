@@ -1,0 +1,75 @@
+
+.form {
+
+  &__label {
+    font-size: 12px;
+    line-height: 16px;
+    
+    span {
+      display: block;
+      margin-bottom: 24px;
+    }
+  }
+  
+  &__input {
+    width: 100%;
+    border: 1px solid #858585;
+    border-radius: 20px;
+    padding: 8px 16px;
+    margin-bottom: 24px;
+    
+    &:hover {
+      outline: 1px solid #ffb71b;
+    }
+
+    &:focus {
+      outline: 1px solid #ffb71b;
+    }
+  }
+
+  &__textarea {
+    width: 100%;
+    border: 1px solid #858585;
+    border-radius: 20px;
+    padding: 8px 16px;  
+    height: 150px;  
+    margin-bottom: 8px;  
+    resize: none;
+
+    &:hover {
+      outline: 1px solid #ffb71b;
+    }
+
+    &:focus {
+      outline: 1px solid #ffb71b;
+    }
+  }
+
+  &__file {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+  }
+
+  &__descr {
+    font-size: 16px;
+    line-height: 24px;
+    text-decoration-line: underline;
+    cursor: pointer;
+  }
+
+  &__btn {
+    width: 100%;
+    margin-bottom: 16px;
+  }
+
+  &__text {
+    font-size: 12px;
+    line-height: 18px;
+
+    a {
+      text-decoration-line: underline;
+    }
+  }
+}

@@ -1,0 +1,52 @@
+.differ {
+  
+  &__inner {
+    display: flex;
+    align-items: center;
+    padding: 88px 0;
+
+    @media (max-width: (992px)) {
+      padding: 57px 0;
+    }
+  }
+
+  &__img {
+    padding-right: 20px;
+
+    @media (max-width: (992px)) {
+      display: none;
+    }
+  }
+
+  &__content {
+    max-width: 576px;
+    margin-left: auto;
+
+    @media (max-width: (992px)) {
+      max-width: 100%;
+      margin-left: 0;
+    }
+  }
+
+  &__descr {
+    margin-bottom: 32px;
+
+    @media (max-width: (576px)) {
+      font-size: 14px;
+      line-height: 20px;
+    }
+  }
+
+  &__link {
+    text-decoration-line: underline;
+    
+    &:hover {
+      text-decoration-line: none;
+    }
+
+    @media (max-width: (576px)) {
+      font-size: 14px;
+      line-height: 20px;
+    }
+  }
+}
